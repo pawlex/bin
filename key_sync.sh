@@ -8,6 +8,11 @@ CURL=/usr/bin/curl
 TARGET=~/.ssh/authorized_keys
 TEMP=$TARGET.new
 
+if [ ! -d ~/.ssh ]; then
+  mkdir -p ~/.ssh
+  chmod 700 ~/.ssh
+fi
+
 if [ -f $CURL ]; then
  $($CURL -s https://github.com/$USERNAME.keys -o $TEMP)
 fi
