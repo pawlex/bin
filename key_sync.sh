@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#  Run at 45 minutes past every 12th hour.
+#  45 */12 * * * ~/bin/key_sync.sh
+
 USERNAME=pawlex
 CURL=/usr/bin/curl
 TARGET=~/.ssh/authorized_keys
