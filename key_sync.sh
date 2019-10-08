@@ -4,7 +4,15 @@
 # Run at 45 minutes past every 12th hour.
 # 45 */12 * * * ~/bin/key_sync.sh
 
-# GITHUB USERNAME
+# Load configuration from file if it exists.
+# You may also define your credendials inline (below)
+BASE="$(dirname "$0")"
+
+if [ -e $BASE/config.cf ]; then
+    source $BASE/config.cf
+fi
+
+# GITHUB USERNAME (define here
 USERNAME=""
 
 # Define to use private gist as opposed to github managed authorized_keys.
@@ -14,6 +22,12 @@ GISTID=""
 CURL=/usr/bin/curl
 TARGET=~/.ssh/authorized_keys
 TEMP=$TARGET.new
+
+# Abort if nececessary configuration is not defined.
+if [ -z "$USERNAME" ]; then
+        echo "USERNAME not defined"
+        return -1
+fi
 
 # Determine which method to use, Private GIST or GITHUB's authorized_keys.
 if [ -z "$GISTURL" ]; then
