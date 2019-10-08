@@ -41,7 +41,7 @@ if [ -z "$USERNAME" ]; then
 fi
 
 # Determine which method to use, Private GIST or GITHUB's authorized_keys.
-if [ -z "$GISTURL" ]; then
+if [ -z "$GISTID" ]; then
         URL="https://github.com/${USERNAME}.keys"
 else
         URL="https://gist.githubusercontent.com/${USERNAME}/${GISTID}/raw/"
@@ -55,7 +55,7 @@ fi
 # if CURL is installed
 if [ -f $CURL ]; then
   # Grab SSH Keys from github
-  $($CURL -s https://github.com/$USERNAME.keys -o $TEMP)
+  $($CURL -s $URL -o $TEMP)
  else
   echo "key not updated.  curl is not installed"
   exit -1
