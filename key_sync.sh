@@ -19,15 +19,15 @@
 # You may also define your credendials inline (below)
 BASE="$(dirname "$0")"
 
-if [ -e $BASE/key_sync_config.cf ]; then
-    source $BASE/key_sync_config.cf
+if [ -e $BASE/key_sync.cf ]; then
+    source $BASE/key_sync.cf
 fi
 
-# GITHUB USERNAME (REQUIRED)
-USERNAME=""
+# GITHUB USERNAME (REQUIRED -- here or in .cf)
+#USERNAME=""
 
 # Define to use private gist as opposed to github managed authorized_keys.
-GISTID=""
+#GISTID=""
 
 # Not necessary to modify anything below this line.
 CURL=/usr/bin/curl
