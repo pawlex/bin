@@ -1,4 +1,15 @@
 #!/bin/bash
+###################################################################
+#Script Name    : key_sync.sh
+#Description    : Syncronize your private_keys with a hosted
+#               : authorized_keys file.
+#Args           : NONE
+#Required Defs  : USERNAME
+#Optional Defs  : GISTID
+#Author         : Paul Komurka
+#Email          : pawlex@gmail.com
+###################################################################
+
 
 # BASIC CRON EXAMPLE
 # Run at 45 minutes past every 12th hour.
@@ -12,7 +23,7 @@ if [ -e $BASE/config.cf ]; then
     source $BASE/config.cf
 fi
 
-# GITHUB USERNAME (define here
+# GITHUB USERNAME (REQUIRED)
 USERNAME=""
 
 # Define to use private gist as opposed to github managed authorized_keys.
