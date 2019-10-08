@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Copy this file to key_sync_config.cf and define the variables below.
+# There is a .gitignore for key_sync_config.cf to avoid leaking 
+# private data back to github.
+# 
+# Can be defined in-line of key_sync.sh if you
+# don't wish to mess with config files.
+
+# Required
+#USERNAME=""
+
+# Optional but required for private gist method
+#GISTID=""
