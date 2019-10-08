@@ -19,8 +19,8 @@
 # You may also define your credendials inline (below)
 BASE="$(dirname "$0")"
 
-if [ -e $BASE/config.cf ]; then
-    source $BASE/config.cf
+if [ -e $BASE/key_sync_config.cf ]; then
+    source $BASE/key_sync_config.cf
 fi
 
 # GITHUB USERNAME (REQUIRED)
