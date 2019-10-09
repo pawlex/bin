@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ###################################################################
 #Script Name    : key_sync.sh
 #Description    : Syncronize your private_keys with a hosted
