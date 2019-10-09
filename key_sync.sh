@@ -30,7 +30,15 @@ fi
 #GISTID=""
 
 # Not necessary to modify anything below this line.
-CURL=/usr/bin/curl
+
+# Need to make sure the system has CURL installed.
+if hash curl 2>/dev/null; then
+    CURL=$(which curl)
+else
+    printf "CURL not installed"
+    exit -1
+fi
+
 TARGET=~/.ssh/authorized_keys
 TEMP=$TARGET.new
 
