@@ -1,2 +1,2 @@
 # Ignore private configuration file
-key_sync_config.cf
+*.cf
