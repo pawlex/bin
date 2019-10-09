@@ -3,3 +3,7 @@
 USERNAME=""
 APIKEY=""
 TUNNEL_ID=""
+# Local tunnel IP adddress ("a" side, ::2)
+P2P_LOCAL=""
+# Remote tunnel IP address ("a" side, ::1)
+P2P_REMOTE=""
