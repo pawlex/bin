@@ -23,7 +23,7 @@ fi
 
 URL="https://${USERNAME}:${APIKEY}@ipv4.tunnelbroker.net/nic/update?hostname=${TUNNEL_ID}"
 
-RETVAL=$(eval $CURL -4 $URL)
+RETVAL=$(eval $CURL -4 $URL -s)
 echo $RETVAL
 
 exit 0
