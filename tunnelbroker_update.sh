@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+###################################################################
+#Script Name    : tunnelbroker_update.sh
+#Description    : updates HE endpoint address (b-side) with public
+#               : facing IPv4 address.
+#Args           : NONE
+#Required Defs  : USERNAME,APIKEY,TUNNEL_ID,P2P_LOCAL,P2P_REMOTE
+#Optional Defs  : NONE
+#Required Deps	: bash,curl,ping6
+#Author         : Paul Komurka
+#Email          : pawlex@gmail.com
+###################################################################
 
 # Load configuration from file if it exists.
 # You may also define your credendials inline (below)
