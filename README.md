@@ -10,3 +10,4 @@
 * intended to be used with cron
 * will update tunnelbroker endpoint (b endpoint) with public IP address
 * lightweight using curl
+* inline and file-based configuration with example.
